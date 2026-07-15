@@ -1,4 +1,16 @@
-﻿# AislePilot Shopping Agent
+---
+title: Shopping Voice Agent
+emoji: "AI"
+colorFrom: gray
+colorTo: pink
+sdk: gradio
+sdk_version: 6.20.0
+python_version: '3.12'
+app_file: app.py
+pinned: false
+---
+
+# AislePilot Shopping Agent
 
 A brand-neutral shopping voice agent for one narrow task: help a customer find products, availability, aisle, bay, and nearby alternatives inside a synthetic retail store.
 
@@ -151,6 +163,7 @@ For local public testing, ngrok can expose `http://localhost:8000` as HTTPS. Ope
 ## Featherless Later
 
 The LLM selection is isolated in `buildModelConfig()` inside `frontend/assistant-config.js`. Replace the OpenAI model object with Vapi's `custom-llm` configuration and store the Featherless credential in Vapi; do not expose the Featherless API key in frontend environment variables.
+
 
 
 
