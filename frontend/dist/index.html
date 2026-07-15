@@ -1,0 +1,939 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shopping Assistant Voice Agent</title>
+    <script type="module" crossorigin src="/assets/index-DDMpbz4F.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CdpyKhJV.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="site-nav" aria-label="Demo site navigation">
+        <a class="brand-lockup" href="#home" aria-label="Shopping Assistant home">
+          <span class="brand-mark" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </span>
+          <span>Shopping Assistant</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#platform">How it helps</a>
+          <a href="#examples">Examples</a>
+          <a href="#research">Research</a>
+          <a href="#deployment">Deployment</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="nav-contact" href="?lab=1" data-open-lab>Research lab</a>
+          <button class="ask-ai-button" type="button" data-open-agent>
+            <span class="ask-ai-icon" aria-hidden="true"></span>
+            <span>Ask AI</span>
+          </button>
+        </div>
+      </header>
+
+      <section id="home" class="promo-strip" aria-label="Demo announcement">
+        <strong>Voice shopping assistant demo</strong>
+        <span>Find products, compare options, check stock, and ask store-policy questions naturally.</span>
+        <button type="button" data-open-agent>Try Ask AI</button>
+      </section>
+
+      <section class="hero-site" aria-label="Shopping voice assistant hero">
+        <div class="hero-copy">
+          <p class="hero-kicker">Natural shopping help</p>
+          <h1>Ask your store assistant anything while you shop.</h1>
+          <p>
+            Tap Ask AI, speak normally, and get a short spoken answer for product locations, availability,
+            recommendations, substitutions, and common store questions.
+          </p>
+          <div class="hero-actions">
+            <button class="primary-hero-button" type="button" data-open-agent>
+              <span class="ask-ai-icon" aria-hidden="true"></span>
+              <span>Ask AI voice agent</span>
+            </button>
+            <a class="secondary-hero-button" href="?lab=1" data-open-lab>
+              Research lab
+            </a>
+          </div>
+          <div class="hero-proof" aria-label="Demo proof points">
+            <div><span>Find</span><strong>aisles, bays, and stock status</strong></div>
+            <div><span>Compare</span><strong>category options and review signals</strong></div>
+            <div><span>Ask</span><strong>returns, pickup, and shelf-help questions</strong></div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Voice shopping agent preview">
+          <div class="retail-scene">
+            <div class="scene-glow"></div>
+            <div class="product-orbit product-orbit-one">
+              <span>Paper towels</span>
+              <strong>A12</strong>
+            </div>
+            <div class="product-orbit product-orbit-two">
+              <span>Dog food</span>
+              <strong>P03</strong>
+            </div>
+            <div class="product-orbit product-orbit-three">
+              <span>Returns</span>
+              <strong>Policy</strong>
+            </div>
+            <div class="voice-core">
+              <span class="core-ring"></span>
+              <span class="core-ring core-ring-two"></span>
+              <div class="voice-bars" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <strong>Ask AI</strong>
+              <small>Voice agent ready</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="platform" class="site-section platform-section" aria-label="Platform overview">
+        <div>
+          <p class="eyebrow">What it helps with</p>
+          <h2>A simple shopping assistant for common in-store questions.</h2>
+        </div>
+        <div class="platform-grid">
+          <article>
+            <span>01</span>
+            <h3>Find products</h3>
+            <p>Ask where something is and hear the aisle, bay, and stock status in a short answer.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Compare options</h3>
+            <p>Ask for the best item in a category and get a recommendation based on catalog signals.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Handle store questions</h3>
+            <p>Ask about returns, pickup, substitutions, accessibility, or what to do when a shelf is empty.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="examples" class="site-section benchmark-teaser" aria-label="Example questions">
+        <div>
+          <p class="eyebrow">Try saying</p>
+          <h2>Natural questions, short spoken answers.</h2>
+          <p>
+            “Where are paper towels?” “What dog food do you recommend?” “Can I return opened electronics?”
+            “The shelf is empty but the app says it is in stock.”
+          </p>
+        </div>
+        <button class="secondary-hero-button" type="button" data-open-agent>
+          Ask AI now
+        </button>
+      </section>
+
+      <section id="research" class="site-section research-strip" aria-label="Research highlights">
+        <div><span>Voice quality</span><strong>Tests whether accents still preserve the shopper’s intent</strong></div>
+        <div><span>Grounding</span><strong>Checks that answers stay supported by available store evidence</strong></div>
+        <div><span>Interruption</span><strong>Lets the shopper stop the assistant and ask a new question</strong></div>
+      </section>
+
+      <section id="deployment" class="site-section deploy-section" aria-label="Free deployment path">
+        <div>
+          <p class="eyebrow">Deployment</p>
+          <h2>Designed for a lightweight public demo and a private research dashboard.</h2>
+        </div>
+        <div class="deploy-grid">
+          <article><strong>Public site</strong><span>A clean shopping-assistant experience for demos and judges.</span></article>
+          <article><strong>Private lab</strong><span>Research metrics are available through a separate dashboard link.</span></article>
+          <article><strong>Free tiers</strong><span>Static hosting and a private service layer can stay free-friendly.</span></article>
+        </div>
+      </section>
+
+      <section id="voiceCallModal" class="voice-call-modal" aria-hidden="true" aria-label="Ask AI voice agent">
+        <div class="voice-call-card">
+          <div class="voice-call-head">
+            <div class="voice-agent-title">
+              <span class="voice-agent-mark" aria-hidden="true"></span>
+              <div>
+                <strong>Shopping AI</strong>
+                <span>Store assistant</span>
+              </div>
+            </div>
+            <div class="voice-live-pill">
+              <span id="simpleStatusDot"></span>
+              <strong id="simpleStatusText">Ready</strong>
+              <span id="simpleTimer">00:00</span>
+            </div>
+          </div>
+
+          <div class="voice-call-body">
+            <button id="simpleCallButton" class="voice-avatar-button" type="button" aria-label="Start or end voice call">
+              <span class="voice-avatar-rings" aria-hidden="true"></span>
+              <span class="voice-agent-mark large" aria-hidden="true"></span>
+            </button>
+            <h2>Shopping AI</h2>
+            <p id="simpleHint">Tap the center button and ask a shopping question.</p>
+            <div class="voice-pulse-dots" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
+
+          <div class="simple-transcript">
+            <div>
+              <span>You asked</span>
+              <p id="simpleTranscript">No question yet.</p>
+            </div>
+            <div>
+              <span>Answer</span>
+              <p id="simpleAnswer">Ready to help.</p>
+            </div>
+          </div>
+
+          <div class="voice-call-actions">
+            <button id="simpleEndButton" class="end-call-button" type="button">
+              <span>End Call</span>
+            </button>
+            <button id="simpleCloseButton" class="simple-close-button" type="button">Close</button>
+          </div>
+
+          <p id="simpleSetupMessage" class="simple-setup-message"></p>
+
+          <div id="feedbackPanel" class="feedback-panel" hidden>
+            <div>
+              <strong>How was this voice help?</strong>
+              <span>Your feedback helps improve the shopping assistant.</span>
+            </div>
+            <div class="feedback-buttons" role="group" aria-label="Call feedback rating">
+              <button type="button" data-feedback-score="1">1</button>
+              <button type="button" data-feedback-score="2">2</button>
+              <button type="button" data-feedback-score="3">3</button>
+              <button type="button" data-feedback-score="4">4</button>
+              <button type="button" data-feedback-score="5">5</button>
+            </div>
+            <textarea id="feedbackComment" class="feedback-comment" rows="2" placeholder="Optional comment"></textarea>
+            <button id="feedbackSubmitButton" class="feedback-submit-button" type="button">Submit feedback</button>
+            <p id="feedbackThanks" class="feedback-thanks"></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="agentDock" class="agent-dock" aria-hidden="true" aria-label="Research lab workspace">
+        <div class="agent-dock-panel">
+          <div class="agent-dock-head">
+            <div>
+              <p class="eyebrow">Private research dashboard</p>
+              <h2>Evaluation lab</h2>
+            </div>
+            <button id="agentCloseButton" class="secondary-button" type="button">Close</button>
+          </div>
+
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Research dashboard</p>
+          <h1>Shopping Assistant Research Agent</h1>
+        </div>
+        <div class="header-statuses">
+          <span class="provider-badge">Private lab</span>
+          <div class="connection-strip" aria-label="Connection">
+            <span id="connectionDot" class="dot"></span>
+            <span id="connectionText">Offline</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="workbench">
+        <section class="panel voice-panel" aria-label="Voice console">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Live voice session</p>
+              <h2>Item, stock, aisle</h2>
+            </div>
+            <button id="callButtonTop" class="secondary-button" type="button">Start</button>
+          </div>
+
+          <div class="config-grid">
+            <label>
+              <span>Call token</span>
+              <input id="voicePublicKey" class="text-input" type="password" autocomplete="off" placeholder="Owner-managed value" />
+            </label>
+            <label>
+              <span>Service endpoint</span>
+              <input id="toolServerUrl" class="text-input" autocomplete="off" />
+            </label>
+            <label>
+              <span>Voice profile</span>
+              <input id="voiceId" class="text-input" autocomplete="off" />
+            </label>
+            <div class="endpointing-control" aria-label="Endpointing mode">
+              <span>Endpointing</span>
+              <div class="segmented-control" role="group">
+                <button type="button" data-endpointing-mode="fast">Fast</button>
+                <button type="button" data-endpointing-mode="balanced">Balanced</button>
+                <button type="button" data-endpointing-mode="safe">Safe</button>
+              </div>
+              <small id="endpointingPresetSummary">Balanced turn-taking.</small>
+            </div>
+          </div>
+
+          <div class="talk-zone">
+            <button id="callButton" class="talk-button" type="button" aria-pressed="false">
+              <span class="mic-mark" aria-hidden="true"></span>
+              <span id="callLabel">Start voice session</span>
+            </button>
+            <div class="vad-status">
+              <span id="vadDot" class="dot"></span>
+              <strong id="vadText">Voice idle</strong>
+            </div>
+            <div class="meter" aria-hidden="true">
+              <span id="meterBar"></span>
+            </div>
+          </div>
+
+          <div class="transcript-grid">
+            <section class="readout" aria-label="Transcript">
+              <div class="readout-title">Customer</div>
+              <p id="transcriptText">No turn yet.</p>
+            </section>
+            <section class="readout" aria-label="Associate answer">
+              <div class="readout-title">Associate</div>
+              <p id="answerText">Ready.</p>
+            </section>
+          </div>
+        </section>
+
+        <section class="panel pipeline-panel" aria-label="Pipeline">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Conversation flow</p>
+              <h2>Live turn</h2>
+            </div>
+            <span id="activeStage" class="stage-chip">Idle</span>
+          </div>
+
+          <div class="pipeline">
+            <div class="node vad-node" data-stage="vad">
+              <span class="node-kicker">Step 1</span>
+              <strong>Listen</strong>
+              <small>voice input</small>
+            </div>
+            <div class="node stt-node" data-stage="stt">
+              <span class="node-kicker">Step 2</span>
+              <strong>Understand</strong>
+              <small>speech text</small>
+            </div>
+            <div class="node llm-node" data-stage="llm">
+              <span class="node-kicker">Step 3</span>
+              <strong>Answer</strong>
+              <small>grounded response</small>
+            </div>
+            <div class="node tts-node" data-stage="tts">
+              <span class="node-kicker">Step 4</span>
+              <strong>Speak</strong>
+              <small>voice output</small>
+            </div>
+          </div>
+
+          <div class="tool-result" aria-label="Tool result">
+            <div id="toolTitle" class="readout-title">Catalog lookup</div>
+            <dl>
+              <div><dt id="toolItemLabel">Item</dt><dd id="toolItem">-</dd></div>
+              <div><dt id="toolAisleLabel">Aisle</dt><dd id="toolAisle">-</dd></div>
+              <div><dt id="toolStockLabel">Stock</dt><dd id="toolStock">-</dd></div>
+              <div><dt id="toolMatchLabel">Match</dt><dd id="toolMatch">-</dd></div>
+            </dl>
+          </div>
+
+          <div class="catalog-intelligence" aria-label="Catalog intelligence">
+            <div class="readout-title">Catalog intelligence</div>
+            <div class="insight-grid">
+              <div><span>Products</span><strong id="catalogProductCount">-</strong></div>
+              <div><span>Departments</span><strong id="catalogDepartmentCount">-</strong></div>
+              <div><span>Low stock</span><strong id="catalogLowStock">-</strong></div>
+              <div><span>Out</span><strong id="catalogOutStock">-</strong></div>
+            </div>
+            <div id="catalogEvidence" class="catalog-evidence">No lookup evidence yet.</div>
+            <div id="relationRows" class="relation-rows">Select a product to see alternatives and complements.</div>
+          </div>
+
+          <div class="catalog-strip" id="catalogStrip" aria-label="Catalog examples"></div>
+        </section>
+
+        <section class="panel ledger-panel" aria-label="Cost and latency ledger">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Live ledger</p>
+              <h2>Cost + latency</h2>
+            </div>
+            <span id="turnCount" class="stage-chip">0 turns</span>
+          </div>
+
+          <div class="metric-grid">
+            <div><span>Response</span><strong id="metricTotal">-</strong></div>
+            <div><span>Voice capture</span><strong id="metricVad">-</strong></div>
+            <div><span>Speech final</span><strong id="metricStt">-</strong></div>
+            <div><span>Voice start</span><strong id="metricTts">-</strong></div>
+          </div>
+
+          <div class="speech-benchmark" aria-label="Speech-to-speech benchmark">
+            <div class="readout-title">Speech-to-speech benchmark</div>
+            <div class="benchmark-grid">
+              <div><span>Endpointing</span><strong id="endpointingModeMetric">Balanced</strong></div>
+              <div><span>Barge-ins</span><strong id="bargeInCount">0 / 0</strong></div>
+              <div><span>Stop time</span><strong id="bargeStopMs">-</strong></div>
+              <div><span>New query</span><strong id="bargeCaptureMs">-</strong></div>
+              <div><span>Overlap saved</span><strong id="overlapSavedMs">-</strong></div>
+            </div>
+            <div id="bargeStatus" class="barge-status">No interruption measured yet.</div>
+            <div id="waterfallRows" class="waterfall-rows">Waiting for the next turn.</div>
+          </div>
+
+          <div id="ledgerRows" class="ledger-rows"></div>
+
+          <div class="assumptions" aria-label="Cost assumptions">
+            <span id="assumptionAudio">Call -</span>
+            <span id="assumptionTokens">Tokens -</span>
+          </div>
+
+          <div class="sources">
+            <span>Detailed pricing references are kept in the private research notes.</span>
+          </div>
+        </section>
+      </section>
+
+      <section class="panel trace-panel" aria-label="Trace recorder and replay">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Evaluation trace</p>
+            <h2>Recorder + replay</h2>
+          </div>
+          <span id="traceStatus" class="stage-chip">Idle</span>
+        </div>
+
+        <div class="trace-grid">
+          <div><span>Trace</span><strong id="traceCount">none</strong></div>
+          <div><span>Events</span><strong id="traceEventCount">0</strong></div>
+          <div><span>Tool calls</span><strong id="traceToolCount">0</strong></div>
+          <div><span>Replay match</span><strong id="traceReplayScore">-</strong></div>
+          <div><span>Trust score</span><strong id="traceTrustScore">-</strong></div>
+          <div><span>Latest cost</span><strong id="traceCost">$0.0000</strong></div>
+          <div><span>Customer happy</span><strong id="feedbackHappyMetric">-</strong></div>
+        </div>
+
+        <div class="trace-layout">
+          <section aria-label="Recent traces">
+            <div class="readout-title">Recent traces</div>
+            <div id="traceList" class="trace-list"></div>
+          </section>
+          <section aria-label="Replay results">
+            <div class="readout-title">Replay results</div>
+            <div id="traceReplayRows" class="trace-replay">No trace replay yet.</div>
+          </section>
+          <section aria-label="Trust findings">
+            <div class="readout-title">Trust findings</div>
+            <div id="traceTrustRows" class="trace-replay">No trust evaluation yet.</div>
+          </section>
+        </div>
+      </section>
+      <section class="panel benchmark-panel" aria-label="Benchmark suite">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Benchmark lab</p>
+            <h2>Paper-grade suite</h2>
+          </div>
+          <button id="benchmarkRunButton" class="secondary-button" type="button">Run suite</button>
+        </div>
+
+        <div class="benchmark-controls">
+          <label>
+            <span>Limit</span>
+            <input id="benchmarkLimitInput" class="text-input" inputmode="numeric" autocomplete="off" value="16" />
+          </label>
+          <label>
+            <span>Group</span>
+            <select id="benchmarkGroupSelect" class="text-input">
+              <option value="">All groups</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="suite-metric-grid">
+          <div><span>Cases</span><strong id="benchmarkCasesMetric">-</strong></div>
+          <div><span>Pass rate</span><strong id="benchmarkPassMetric">-</strong></div>
+          <div><span>Runtime p95</span><strong id="benchmarkRuntimeMetric">-</strong></div>
+          <div><span>Voice p95</span><strong id="benchmarkVoiceMetric">-</strong></div>
+          <div><span>Cost / 1k</span><strong id="benchmarkCostMetric">-</strong></div>
+          <div><span>Gate matrix</span><strong id="benchmarkGateMetric">-</strong></div>
+        </div>
+
+        <div class="benchmark-artifacts">
+          <span id="benchmarkRunId">No run yet.</span>
+          <span id="benchmarkArtifacts">Artifacts pending.</span>
+        </div>
+
+        <div class="benchmark-layout">
+          <section aria-label="Benchmark groups">
+            <div class="readout-title">Group scores</div>
+            <div id="benchmarkGroupRows" class="benchmark-group-rows">No suite run yet.</div>
+          </section>
+          <section aria-label="Benchmark cases">
+            <div class="readout-title">Case results</div>
+            <div id="benchmarkCaseRows" class="benchmark-case-rows">No case results yet.</div>
+          </section>
+        </div>
+      </section>
+      <section class="panel speech-lab-panel" aria-label="Speech robustness lab">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Speech robustness</p>
+            <h2>ASR + downstream</h2>
+          </div>
+          <button id="speechRunButton" class="secondary-button" type="button">Run speech suite</button>
+        </div>
+
+        <div class="benchmark-controls">
+          <label>
+            <span>Limit</span>
+            <input id="speechLimitInput" class="text-input" inputmode="numeric" autocomplete="off" value="13" />
+          </label>
+          <label>
+            <span>Group</span>
+            <select id="speechGroupSelect" class="text-input">
+              <option value="">All groups</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="suite-metric-grid">
+          <div><span>Cases</span><strong id="speechCasesMetric">-</strong></div>
+          <div><span>Pass rate</span><strong id="speechPassMetric">-</strong></div>
+          <div><span>WER</span><strong id="speechWerMetric">-</strong></div>
+          <div><span>Entity recall</span><strong id="speechEntityMetric">-</strong></div>
+          <div><span>Voice p95</span><strong id="speechVoiceMetric">-</strong></div>
+          <div><span>Cost / 1k</span><strong id="speechCostMetric">-</strong></div>
+        </div>
+
+        <div class="benchmark-artifacts">
+          <span id="speechRunId">No run yet.</span>
+          <span id="speechArtifacts">Artifacts pending.</span>
+        </div>
+
+        <div class="benchmark-layout">
+          <section aria-label="Speech conditions">
+            <div class="readout-title">Condition scores</div>
+            <div id="speechConditionRows" class="benchmark-group-rows">No speech run yet.</div>
+          </section>
+          <section aria-label="Speech cases">
+            <div class="readout-title">Speech case results</div>
+            <div id="speechCaseRows" class="benchmark-case-rows">No speech case results yet.</div>
+          </section>
+        </div>
+      </section>
+      <section class="panel audio-panel" aria-label="Real audio evaluation">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Real audio eval</p>
+            <h2>Recorded ASR</h2>
+          </div>
+          <button id="audioRunButton" class="secondary-button" type="button">Run audio suite</button>
+        </div>
+
+        <div class="audio-recorder-grid">
+          <label>
+            <span>Prompt</span>
+            <select id="audioCaseSelect" class="text-input">
+              <option value="">Loading prompts</option>
+            </select>
+          </label>
+          <label>
+            <span>Reference</span>
+            <input id="audioReferenceInput" class="text-input" autocomplete="off" />
+          </label>
+        </div>
+
+        <div class="audio-metadata-grid">
+          <label>
+            <span>Speaker</span>
+            <input id="audioSpeakerInput" class="text-input" autocomplete="off" value="speaker-1" />
+          </label>
+          <label>
+            <span>Accent</span>
+            <select id="audioAccentSelect" class="text-input">
+              <option value="user_recorded">User recorded</option>
+              <option value="indian_english">Indian English</option>
+              <option value="us_english">US English</option>
+              <option value="spanish_l1">Spanish L1</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+          <label>
+            <span>Noise</span>
+            <select id="audioNoiseSelect" class="text-input">
+              <option value="room">Room</option>
+              <option value="quiet">Quiet</option>
+              <option value="fan_noise">Fan noise</option>
+              <option value="store_noise">Store noise</option>
+              <option value="checkout_beeps">Checkout beeps</option>
+            </select>
+          </label>
+          <label>
+            <span>Device</span>
+            <select id="audioDeviceSelect" class="text-input">
+              <option value="browser_mic">Browser mic</option>
+              <option value="laptop_mic">Laptop mic</option>
+              <option value="headset">Headset</option>
+              <option value="phone_mic">Phone mic</option>
+            </select>
+          </label>
+          <label>
+            <span>Distance cm</span>
+            <input id="audioDistanceInput" class="text-input" inputmode="numeric" autocomplete="off" value="30" />
+          </label>
+          <label>
+            <span>Notes</span>
+            <input id="audioNotesInput" class="text-input" autocomplete="off" placeholder="optional" />
+          </label>
+        </div>
+
+        <div class="audio-actions">
+          <button id="audioRecordButton" class="secondary-button" type="button">Record</button>
+          <button id="audioSaveButton" class="secondary-button" type="button" disabled>Save recording</button>
+          <button id="audioManifestButton" class="secondary-button" type="button">Build manifest</button>
+          <button id="audioQualityButton" class="secondary-button" type="button">Build retake queue</button>
+          <button id="audioAcceptedButton" class="secondary-button" type="button">Build accepted set</button>
+          <button id="audioErrorButton" class="secondary-button" type="button">Analyze errors</button>
+          <button id="audioAccentSweepButton" class="secondary-button" type="button">Accent sweep</button>
+          <button id="audioStressButton" class="secondary-button" type="button">Generate stress variants</button>
+          <button id="audioRobustnessButton" class="secondary-button" type="button">Analyze robustness</button>
+          <label class="audio-target-control">
+            <span>Target</span>
+            <input id="audioTargetInput" class="text-input" inputmode="numeric" autocomplete="off" value="3" />
+          </label>
+          <label class="report-toggle">
+            <input id="audioFallbackInput" type="checkbox" />
+            <span>Allow transcript fallback</span>
+          </label>
+        </div>
+        <audio id="audioPreview" controls></audio>
+        <div id="audioStatus" class="barge-status">No recording captured yet.</div>
+
+        <div class="suite-metric-grid">
+          <div><span>Recordings</span><strong id="audioRecordingsMetric">-</strong></div>
+          <div><span>Evaluated</span><strong id="audioEvaluatedMetric">-</strong></div>
+          <div><span>Pass rate</span><strong id="audioPassMetric">-</strong></div>
+          <div><span>WER</span><strong id="audioWerMetric">-</strong></div>
+          <div><span>Entity recall</span><strong id="audioEntityMetric">-</strong></div>
+          <div><span>Speech p95</span><strong id="audioSpeechMetric">-</strong></div>
+        </div>
+
+        <div class="suite-metric-grid audio-coverage-grid">
+          <div><span>Multilingual</span><strong id="audioMultilingualMetric">-</strong></div>
+          <div><span>Spanish pass</span><strong id="audioSpanishPassMetric">-</strong></div>
+          <div><span>Surface WER</span><strong id="audioSurfaceWerMetric">-</strong></div>
+          <div><span>Canonical WER</span><strong id="audioCanonicalWerMetric">-</strong></div>
+          <div><span>Canonical entity</span><strong id="audioCanonicalEntityMetric">-</strong></div>
+          <div><span>Downstream</span><strong id="audioDownstreamMetric">-</strong></div>
+        </div>
+
+        <div class="suite-metric-grid audio-coverage-grid">
+          <div><span>Semantic pass</span><strong id="audioSemanticPassMetric">-</strong></div>
+          <div><span>Recovered</span><strong id="audioSemanticRecoveredMetric">-</strong></div>
+          <div><span>Semantic score</span><strong id="audioSemanticScoreMetric">-</strong></div>
+          <div><span>Intent score</span><strong id="audioSemanticIntentMetric">-</strong></div>
+          <div><span>Slot score</span><strong id="audioSemanticSlotMetric">-</strong></div>
+          <div><span>Canonical score</span><strong id="audioSemanticCanonicalMetric">-</strong></div>
+        </div>
+
+        <div class="suite-metric-grid audio-coverage-grid">
+          <div><span>Coverage</span><strong id="audioCoverageMetric">-</strong></div>
+          <div><span>Complete prompts</span><strong id="audioCompleteMetric">-</strong></div>
+          <div><span>Speakers</span><strong id="audioSpeakersMetric">-</strong></div>
+          <div><span>Conditions</span><strong id="audioConditionsMetric">-</strong></div>
+          <div><span>Missing</span><strong id="audioMissingMetric">-</strong></div>
+          <div><span>Manifest</span><strong id="audioManifestMetric">-</strong></div>
+        </div>
+
+        <div class="suite-metric-grid audio-coverage-grid">
+          <div><span>Usable</span><strong id="audioUsableMetric">-</strong></div>
+          <div><span>Retakes</span><strong id="audioRetakeMetric">-</strong></div>
+          <div><span>Urgent</span><strong id="audioUrgentMetric">-</strong></div>
+          <div><span>Empty</span><strong id="audioEmptyMetric">-</strong></div>
+          <div><span>Wrong prompt</span><strong id="audioWrongPromptMetric">-</strong></div>
+          <div><span>QA score</span><strong id="audioQualityScoreMetric">-</strong></div>
+        </div>
+
+        <div class="suite-metric-grid audio-coverage-grid">
+          <div><span>Accepted</span><strong id="audioAcceptedMetric">-</strong></div>
+          <div><span>Accepted pass</span><strong id="audioAcceptedPassMetric">-</strong></div>
+          <div><span>Superseded</span><strong id="audioSupersededMetric">-</strong></div>
+          <div><span>Needs retake</span><strong id="audioAcceptedRetakeMetric">-</strong></div>
+          <div><span>Accepted WER</span><strong id="audioAcceptedWerMetric">-</strong></div>
+          <div><span>Raw lift</span><strong id="audioAcceptedLiftMetric">-</strong></div>
+        </div>
+
+        <div class="suite-metric-grid audio-coverage-grid">
+          <div><span>Top failure</span><strong id="audioErrorTopMetric">-</strong></div>
+          <div><span>Buckets</span><strong id="audioErrorBucketMetric">-</strong></div>
+          <div><span>ASR-only</span><strong id="audioAsrOnlyMetric">-</strong></div>
+          <div><span>Downstream</span><strong id="audioDownstreamFailMetric">-</strong></div>
+          <div><span>Language mismatch</span><strong id="audioLanguageMismatchMetric">-</strong></div>
+          <div><span>Coverage gaps</span><strong id="audioCoverageGapMetric">-</strong></div>
+        </div>
+
+        <div class="suite-metric-grid audio-robustness-grid">
+          <div><span>Best ASR config</span><strong id="audioAccentBestMetric">-</strong></div>
+          <div><span>Accent lift</span><strong id="audioAccentLiftMetric">-</strong></div>
+          <div><span>Entity lift</span><strong id="audioAccentEntityMetric">-</strong></div>
+          <div><span>Sweep cases</span><strong id="audioAccentCasesMetric">-</strong></div>
+        </div>
+
+        <div class="suite-metric-grid audio-robustness-grid">
+          <div><span>Compared</span><strong id="audioRobustnessMetric">-</strong></div>
+          <div><span>Regressions</span><strong id="audioRegressionMetric">-</strong></div>
+          <div><span>Worst variant</span><strong id="audioWorstVariantMetric">-</strong></div>
+          <div><span>WER delta</span><strong id="audioWorstWerMetric">-</strong></div>
+        </div>
+
+        <div class="benchmark-artifacts">
+          <span id="audioRunId">No audio run yet.</span>
+          <span id="audioArtifacts">Artifacts pending.</span>
+          <span id="audioManifestArtifacts">Manifest pending.</span>
+          <span id="audioQualityArtifacts">Audio QA pending.</span>
+          <span id="audioAcceptedArtifacts">Accepted set pending.</span>
+          <span id="audioErrorArtifacts">Error analysis pending.</span>
+          <span id="audioAccentArtifacts">Accent sweep pending.</span>
+          <span id="audioRobustnessArtifacts">Robustness pending.</span>
+        </div>
+
+        <div class="benchmark-layout">
+          <section aria-label="Audio prompt coverage">
+            <div class="readout-title">Prompt coverage</div>
+            <div id="audioManifestRows" class="benchmark-group-rows">No manifest yet.</div>
+          </section>
+          <section aria-label="Recorded audio cases">
+            <div class="readout-title">Recordings</div>
+            <div id="audioRecordingRows" class="benchmark-group-rows">No recordings yet.</div>
+          </section>
+          <section aria-label="Real audio results">
+            <div class="readout-title">Audio case results</div>
+            <div id="audioCaseRows" class="benchmark-case-rows">No audio run yet.</div>
+          </section>
+          <section aria-label="Audio retake queue">
+            <div class="readout-title">Retake queue</div>
+            <div id="audioQualityRows" class="benchmark-case-rows">No audio QA gate yet.</div>
+          </section>
+          <section aria-label="Accepted audio benchmark set">
+            <div class="readout-title">Accepted set</div>
+            <div id="audioAcceptedRows" class="benchmark-case-rows">No accepted set yet.</div>
+          </section>
+          <section aria-label="Audio error taxonomy">
+            <div class="readout-title">Error taxonomy</div>
+            <div id="audioErrorRows" class="benchmark-case-rows">No audio error analysis yet.</div>
+          </section>
+          <section aria-label="Accent robustness sweep">
+            <div class="readout-title">Accent sweep</div>
+            <div id="audioAccentRows" class="benchmark-case-rows">No accent sweep yet.</div>
+          </section>
+          <section aria-label="Audio robustness deltas">
+            <div class="readout-title">Robustness deltas</div>
+            <div id="audioRobustnessRows" class="benchmark-case-rows">No robustness analysis yet.</div>
+          </section>
+        </div>
+      </section>
+      <section class="panel report-panel" aria-label="Paper results pack">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Paper export</p>
+            <h2>Results pack</h2>
+          </div>
+          <div class="panel-actions">
+            <button id="statsRunButton" class="secondary-button" type="button">Run stats</button>
+            <button id="claimsRunButton" class="secondary-button" type="button">Run claims</button>
+            <button id="planRunButton" class="secondary-button" type="button">Plan next</button>
+            <button id="caseFactoryRunButton" class="secondary-button" type="button">Build cases</button>
+            <button id="draftValidationRunButton" class="secondary-button" type="button">Validate drafts</button>
+            <button id="promotionRunButton" class="secondary-button" type="button">Preview promote</button>
+            <button id="reportRunButton" class="secondary-button" type="button">Generate pack</button>
+          </div>
+        </div>
+
+        <label class="report-toggle">
+          <input id="reportRerunInput" type="checkbox" />
+          <span>Rerun suites before export</span>
+        </label>
+        <label class="report-toggle">
+          <input id="promotionWriteInput" type="checkbox" />
+          <span>Write suite files</span>
+        </label>
+
+        <div class="suite-metric-grid">
+          <div><span>Readiness</span><strong id="reportReadinessMetric">-</strong></div>
+          <div><span>Cases</span><strong id="reportCasesMetric">-</strong></div>
+          <div><span>Task pass</span><strong id="reportTaskPassMetric">-</strong></div>
+          <div><span>Speech pass</span><strong id="reportSpeechPassMetric">-</strong></div>
+          <div><span>Cost / 1k</span><strong id="reportCostMetric">-</strong></div>
+          <div><span>Voice p95</span><strong id="reportVoiceMetric">-</strong></div>
+        </div>
+
+        <div class="suite-metric-grid statistics-grid">
+          <div><span>CI metrics</span><strong id="statsMetricsMetric">-</strong></div>
+          <div><span>Coverage</span><strong id="statsCoverageMetric">-</strong></div>
+          <div><span>Widest CI</span><strong id="statsWidestMetric">-</strong></div>
+          <div><span>Interval</span><strong id="statsCiMetric">-</strong></div>
+        </div>
+
+        <div class="suite-metric-grid statistics-grid">
+          <div><span>Claims ready</span><strong id="claimReadyMetric">-</strong></div>
+          <div><span>Need data</span><strong id="claimDataMetric">-</strong></div>
+          <div><span>Need work</span><strong id="claimWorkMetric">-</strong></div>
+          <div><span>Next action</span><strong id="claimActionMetric">-</strong></div>
+        </div>
+
+        <div class="suite-metric-grid statistics-grid">
+          <div><span>Planned samples</span><strong id="planSamplesMetric">-</strong></div>
+          <div><span>Text + speech</span><strong id="planTextMetric">-</strong></div>
+          <div><span>Audio + stress</span><strong id="planAudioMetric">-</strong></div>
+          <div><span>External calls</span><strong id="planProviderMetric">-</strong></div>
+        </div>
+
+        <div class="suite-metric-grid statistics-grid">
+          <div><span>Draft total</span><strong id="caseFactoryTotalMetric">-</strong></div>
+          <div><span>Benchmark</span><strong id="caseFactoryBenchmarkMetric">-</strong></div>
+          <div><span>Speech</span><strong id="caseFactorySpeechMetric">-</strong></div>
+          <div><span>Audio prompts</span><strong id="caseFactoryAudioMetric">-</strong></div>
+        </div>
+
+        <div class="suite-metric-grid statistics-grid">
+          <div><span>Ready drafts</span><strong id="draftReadyMetric">-</strong></div>
+          <div><span>Blocked</span><strong id="draftBlockedMetric">-</strong></div>
+          <div><span>Benchmark ready</span><strong id="draftBenchmarkMetric">-</strong></div>
+          <div><span>Speech ready</span><strong id="draftSpeechMetric">-</strong></div>
+        </div>
+
+        <div class="suite-metric-grid statistics-grid">
+          <div><span>Promotion mode</span><strong id="promotionModeMetric">-</strong></div>
+          <div><span>Added</span><strong id="promotionAddedMetric">-</strong></div>
+          <div><span>Skipped</span><strong id="promotionSkippedMetric">-</strong></div>
+          <div><span>Files written</span><strong id="promotionWrittenMetric">-</strong></div>
+        </div>
+
+        <div class="benchmark-artifacts">
+          <span id="reportRunId">No report yet.</span>
+          <span id="reportArtifacts">Artifacts pending.</span>
+          <span id="statsArtifacts">Statistics pending.</span>
+          <span id="claimsArtifacts">Claims pending.</span>
+          <span id="planArtifacts">Plan pending.</span>
+          <span id="caseFactoryArtifacts">Case drafts pending.</span>
+          <span id="draftValidationArtifacts">Draft validation pending.</span>
+          <span id="promotionArtifacts">Promotion pending.</span>
+        </div>
+
+        <div class="benchmark-layout">
+          <section aria-label="Core paper metrics">
+            <div class="readout-title">Core paper metrics</div>
+            <div id="reportCoreRows" class="benchmark-case-rows">No report generated yet.</div>
+          </section>
+          <section aria-label="Cost comparison">
+            <div class="readout-title">Architecture cost</div>
+            <div id="reportCostRows" class="benchmark-case-rows">No cost comparison yet.</div>
+          </section>
+          <section aria-label="Claim readiness">
+            <div class="readout-title">Claim readiness</div>
+            <div id="claimsRows" class="benchmark-case-rows">No claim gate run yet.</div>
+          </section>
+          <section aria-label="Experiment plan">
+            <div class="readout-title">Experiment plan</div>
+            <div id="planRows" class="benchmark-case-rows">No experiment plan yet.</div>
+          </section>
+          <section aria-label="Case factory">
+            <div class="readout-title">Case factory</div>
+            <div id="caseFactoryRows" class="benchmark-case-rows">No draft cases yet.</div>
+          </section>
+          <section aria-label="Draft validation">
+            <div class="readout-title">Draft validation</div>
+            <div id="draftValidationRows" class="benchmark-case-rows">No draft validation yet.</div>
+          </section>
+          <section aria-label="Suite promotion">
+            <div class="readout-title">Suite promotion</div>
+            <div id="promotionRows" class="benchmark-case-rows">No promotion preview yet.</div>
+          </section>
+          <section aria-label="Statistical confidence intervals">
+            <div class="readout-title">Confidence intervals</div>
+            <div id="statsRows" class="benchmark-case-rows">No statistics pack yet.</div>
+          </section>
+        </div>
+      </section>
+      <section class="panel rag-lab-panel" aria-label="RAG evidence lab">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Policy RAG lab</p>
+            <h2>Policy/SOP evidence</h2>
+          </div>
+          <button id="ragRunButton" class="secondary-button" type="button">Run</button>
+        </div>
+
+        <div class="rag-query-row">
+          <input id="ragQueryInput" class="text-input" autocomplete="off" placeholder="Policy or SOP question" />
+        </div>
+        <div id="ragSampleRows" class="rag-samples" aria-label="RAG sample questions"></div>
+
+        <div class="rag-metric-grid">
+          <div><span>Intent</span><strong id="ragIntentMetric">-</strong></div>
+          <div><span>Confidence</span><strong id="ragConfidenceMetric">-</strong></div>
+          <div><span>Margin</span><strong id="ragMarginMetric">-</strong></div>
+          <div><span>Validation</span><strong id="ragValidationMetric">-</strong></div>
+          <div><span>Retrieval</span><strong id="ragLatencyMetric">-</strong></div>
+          <div><span>Sources</span><strong id="ragSourcesMetric">-</strong></div>
+        </div>
+
+        <div class="rag-gate-block">
+          <div class="readout-title">Evidence gate</div>
+          <div class="rag-gate-grid">
+            <div><span>Status</span><strong id="ragGateStatus">-</strong></div>
+            <div><span>Action</span><strong id="ragGateAction">-</strong></div>
+            <div><span>Faithfulness</span><strong id="ragGateScore">-</strong></div>
+            <div><span>Decision</span><strong id="ragGateLatency">-</strong></div>
+          </div>
+          <div id="ragGateRows" class="rag-gate-rows">Run a policy question to see the answer gate.</div>
+        </div>
+
+        <div class="rag-ablation-block">
+          <div class="readout-title">Retrieval ablation</div>
+          <div id="ragAblationRows" class="rag-ablation-rows">Run a question to compare retrieval variants.</div>
+        </div>
+
+        <div class="rag-faithfulness-block">
+          <div class="readout-title">Faithfulness grader</div>
+          <div class="rag-answer-row">
+            <textarea id="ragAnswerInput" class="text-input rag-answer-input" autocomplete="off" placeholder="Answer to grade"></textarea>
+            <button id="ragFaithfulnessButton" class="secondary-button" type="button">Grade</button>
+          </div>
+          <div class="rag-faithfulness-grid">
+            <div><span>Verdict</span><strong id="ragFaithfulnessVerdict">-</strong></div>
+            <div><span>Score</span><strong id="ragFaithfulnessScore">-</strong></div>
+            <div><span>Claims</span><strong id="ragFaithfulnessClaims">-</strong></div>
+            <div><span>Signatures</span><strong id="ragFaithfulnessSignatures">-</strong></div>
+          </div>
+          <div id="ragFaithfulnessRows" class="rag-faithfulness-rows">Grade an answer against retrieved evidence.</div>
+        </div>
+
+        <div class="rag-lab-layout">
+          <section aria-label="Query plan">
+            <div class="readout-title">Query plan</div>
+            <div id="ragPlanRows" class="rag-plan">Run a policy question.</div>
+          </section>
+          <section aria-label="Evidence chunks">
+            <div class="readout-title">Evidence chunks</div>
+            <div id="ragEvidenceRows" class="rag-evidence-list">No evidence yet.</div>
+          </section>
+          <section aria-label="Answer contract">
+            <div class="readout-title">Answer contract</div>
+            <div id="ragContractRows" class="rag-contract-list">No contract yet.</div>
+          </section>
+        </div>
+      </section>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+
+
+
+
+
+
