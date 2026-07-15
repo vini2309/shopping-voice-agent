@@ -1,6 +1,6 @@
 ---
 title: Shopping Voice Agent
-emoji: "AI"
+emoji: 🛒
 colorFrom: gray
 colorTo: pink
 sdk: gradio
