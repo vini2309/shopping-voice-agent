@@ -35,6 +35,7 @@ from .traces import list_traces, load_trace, replay_trace, save_trace
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
 FRONTEND_DIR = ROOT_DIR / "frontend"
+FRONTEND_BUILD_DIR = FRONTEND_DIR / "build"
 FRONTEND_DIST_DIR = FRONTEND_DIR / "dist"
 FEEDBACK_DIR = ROOT_DIR / "artifacts" / "feedback"
 FEEDBACK_JSONL_PATH = FEEDBACK_DIR / "calls.jsonl"
@@ -56,6 +57,8 @@ def _frontend_origins() -> list[str]:
 
 
 def _static_dir() -> Path:
+    if (FRONTEND_BUILD_DIR / "index.html").is_file():
+        return FRONTEND_BUILD_DIR
     if (FRONTEND_DIST_DIR / "index.html").is_file():
         return FRONTEND_DIST_DIR
     return FRONTEND_DIR
@@ -63,6 +66,8 @@ def _static_dir() -> Path:
 
 def _static_dirs() -> list[Path]:
     dirs = []
+    if (FRONTEND_BUILD_DIR / "index.html").is_file():
+        dirs.append(FRONTEND_BUILD_DIR)
     if (FRONTEND_DIST_DIR / "index.html").is_file():
         dirs.append(FRONTEND_DIST_DIR)
     dirs.append(FRONTEND_DIR)
@@ -861,6 +866,9 @@ async def static_status() -> dict[str, Any]:
     return {
         "root": str(ROOT_DIR),
         "frontend": str(FRONTEND_DIR),
+        "build": str(FRONTEND_BUILD_DIR),
+        "buildIndex": (FRONTEND_BUILD_DIR / "index.html").is_file(),
+        "buildAssets": sorted(path.name for path in (FRONTEND_BUILD_DIR / "assets").glob("*")) if (FRONTEND_BUILD_DIR / "assets").is_dir() else [],
         "dist": str(FRONTEND_DIST_DIR),
         "distIndex": (FRONTEND_DIST_DIR / "index.html").is_file(),
         "distAssets": sorted(path.name for path in (FRONTEND_DIST_DIR / "assets").glob("*")) if (FRONTEND_DIST_DIR / "assets").is_dir() else [],
