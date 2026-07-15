@@ -1,0 +1,17 @@
+.env
+.env.local
+*.env.txt
+backend/.env
+backend/.env.txt
+frontend/.env.local
+.venv/
+.deps/
+__pycache__/
+*.pyc
+.DS_Store
+node_modules/
+dist/
+.vercel/
+artifacts/
+tmp/
+server*.log

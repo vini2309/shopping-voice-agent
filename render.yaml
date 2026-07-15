@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: shopping-voice-agent
+    env: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: FRONTEND_ORIGINS
+        value: https://shopping-voice-agent.onrender.com
+      - key: PUBLIC_VOICE_AGENT_KEY
+        sync: false
+      - key: PUBLIC_VOICE_ASSISTANT_ID
+        sync: false
+      - key: PUBLIC_VOICE_PROFILE_ID
+        value: burt
+      - key: DEEPGRAM_API_KEY
+        sync: false
+      - key: DEEPGRAM_MODEL
+        value: nova-3

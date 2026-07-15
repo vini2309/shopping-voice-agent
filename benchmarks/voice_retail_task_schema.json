@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aislepilot.local/schemas/voice_retail_task.schema.json",
+  "title": "VoiceRetailBench Task",
+  "type": "object",
+  "required": [
+    "task_id",
+    "split",
+    "modality",
+    "turns",
+    "expected"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "split": {
+      "type": "string",
+      "enum": ["dev", "test", "stress"]
+    },
+    "modality": {
+      "type": "string",
+      "enum": ["text", "audio", "interaction"]
+    },
+    "condition": {
+      "type": "object",
+      "properties": {
+        "accent": { "type": "string" },
+        "language": { "type": "string" },
+        "noise": { "type": "string" },
+        "snr_db": { "type": ["number", "null"] },
+        "barge_in": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "turns": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["role", "text"],
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": ["user", "assistant"]
+          },
+          "text": {
+            "type": "string"
+          },
+          "audio_uri": {
+            "type": ["string", "null"]
+          },
+          "reference_text": {
+            "type": ["string", "null"]
+          },
+          "transcript_variants": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "text"],
+              "properties": {
+                "id": { "type": "string" },
+                "text": { "type": "string" },
+                "provider": { "type": "string" },
+                "condition": {
+                  "type": "object",
+                  "properties": {
+                    "accent": { "type": "string" },
+                    "language": { "type": "string" },
+                    "noise": { "type": "string" },
+                    "snr_db": { "type": ["number", "null"] },
+                    "barge_in": { "type": "boolean" }
+                  },
+                  "additionalProperties": false
+                },
+                "notes": { "type": "string" }
+              },
+              "additionalProperties": false
+            }
+          },
+          "interrupts_turn_index": {
+            "type": ["integer", "null"],
+            "minimum": 0
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "expected": {
+      "type": "object",
+      "required": ["action"],
+      "properties": {
+        "action": {
+          "type": "string",
+          "enum": ["direct", "tool_call", "multi_tool", "request_info", "cannot_answer"]
+        },
+        "tool_name": {
+          "type": ["string", "null"]
+        },
+        "tool_calls": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["tool_name", "query"],
+            "properties": {
+              "tool_name": {
+                "type": "string",
+                "enum": ["lookup_inventory", "search_knowledge"]
+              },
+              "query": {
+                "type": "string"
+              },
+              "item_ids": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "source_ids": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "aisles": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "required_slots": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": ["item", "aisle", "bay", "stock", "cannot_answer", "clarification", "knowledge_source", "policy_summary"]
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "query": {
+          "type": ["string", "null"]
+        },
+        "item_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "source_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "aisles": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_slots": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["item", "aisle", "bay", "stock", "cannot_answer", "clarification", "knowledge_source", "policy_summary"]
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "dataset": { "type": "string" },
+        "license": { "type": "string" },
+        "notes": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

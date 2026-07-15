@@ -1,0 +1,48 @@
+{
+  "name": "VoiceRetailBench paper-scale synthetic suite",
+  "version": "0.4.0",
+  "seed": 20260701,
+  "task_count": 1223,
+  "transcript_pair_count": 189,
+  "by_dataset": {
+    "voice-retailbench-inventory-asr-proxy": 127,
+    "voice-retailbench-barge-in-proxy": 30,
+    "voice-retailbench-clarification": 5,
+    "voice-retailbench-inventory-clean": 508,
+    "voice-retailbench-multiturn": 30,
+    "voice-retailbench-inventory-category": 381,
+    "voice-retailbench-inventory-unsupported": 10,
+    "voice-retailbench-multi-tool-clean": 7,
+    "voice-retailbench-multi-tool-asr-noise-proxy": 7,
+    "voice-retailbench-rag-clean": 55,
+    "voice-retailbench-rag-asr-noise-proxy": 55,
+    "voice-retailbench-rag-unsupported": 8
+  },
+  "by_split": {
+    "stress": 219,
+    "test": 1004
+  },
+  "by_modality": {
+    "text": 1163,
+    "interaction": 60
+  },
+  "by_noise": {
+    "clean": 1137,
+    "store_ambient_proxy": 63,
+    "checkout_beeps_proxy": 10,
+    "freezer_hum_proxy": 13
+  },
+  "by_accent": {
+    "spanish_l1_proxy": 38,
+    "fast_speech_proxy": 50,
+    "indian_english_proxy": 69,
+    "reference_us": 1066
+  },
+  "notes": [
+    "Synthetic retail benchmark for speech-to-tool and speech-to-RAG evaluation.",
+    "Includes multi-tool product-plus-policy tasks where both inventory and knowledge evidence are required.",
+    "Includes reference_text and transcript_variants fields for WER/entity-WER transcript robustness evaluation.",
+    "Audio fields are placeholders until recorded/TTS audio is generated.",
+    "Stress conditions are text proxies for ASR, accent, noise, and interruption experiments."
+  ]
+}

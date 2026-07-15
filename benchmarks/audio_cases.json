@@ -1,0 +1,62 @@
+[
+  {
+    "id": "audio_inv_paper_towels",
+    "route": "inventory",
+    "group": "real_audio_inventory",
+    "condition": { "accent": "user_recorded", "noise": "room", "snrDb": null, "bargeIn": false },
+    "referenceText": "Where are paper towels?",
+    "audioUri": null,
+    "entities": ["paper", "towels"],
+    "expected": { "found": true, "itemIds": ["SHOP-1001"], "aisles": ["A12"], "maxWer": 0.35, "minEntityRecall": 1.0 }
+  },
+  {
+    "id": "audio_inv_dog_food_category",
+    "route": "inventory",
+    "group": "real_audio_category",
+    "condition": { "accent": "user_recorded", "noise": "room", "snrDb": null, "bargeIn": false },
+    "referenceText": "Can you list all the dog food inventory?",
+    "audioUri": null,
+    "entities": ["dog", "food"],
+    "expected": { "found": true, "matchType": "category", "minItemCount": 4, "aisles": ["PT03", "PT04"], "maxWer": 0.35, "minEntityRecall": 1.0 }
+  },
+  {
+    "id": "audio_inv_best_dog_food",
+    "route": "inventory",
+    "group": "real_audio_recommendation",
+    "condition": { "accent": "user_recorded", "noise": "room", "snrDb": null, "bargeIn": false },
+    "referenceText": "What is the best dog food available?",
+    "audioUri": null,
+    "entities": ["best", "dog", "food"],
+    "expected": { "found": true, "matchType": "recommendation", "bestItemId": "SHOP-1124", "maxWer": 0.35, "minEntityRecall": 1.0 }
+  },
+  {
+    "id": "audio_rag_shelf_empty",
+    "route": "knowledge",
+    "group": "real_audio_policy",
+    "condition": { "accent": "user_recorded", "noise": "room", "snrDb": null, "bargeIn": false },
+    "referenceText": "The shelf is empty but your system shows stock.",
+    "audioUri": null,
+    "entities": ["shelf", "empty", "stock"],
+    "expected": { "answerable": true, "gateStatus": "approved", "sources": ["out_of_stock#1"], "maxWer": 0.35, "minEntityRecall": 1.0 }
+  },
+  {
+    "id": "audio_rag_open_electronics",
+    "route": "knowledge",
+    "group": "real_audio_policy",
+    "condition": { "accent": "user_recorded", "noise": "room", "snrDb": null, "bargeIn": false },
+    "referenceText": "Can I return an opened electronics item?",
+    "audioUri": null,
+    "entities": ["opened", "electronics", "item"],
+    "expected": { "answerable": true, "gateStatus": "approved", "sources": ["returns_and_exchanges#2"], "maxWer": 0.45, "minEntityRecall": 0.66 }
+  },
+  {
+    "id": "audio_barge_dog_food",
+    "route": "inventory",
+    "group": "real_audio_barge_in",
+    "condition": { "accent": "user_recorded", "noise": "room", "snrDb": null, "bargeIn": true },
+    "referenceText": "Actually, show me dog food instead.",
+    "audioUri": null,
+    "entities": ["dog", "food"],
+    "expected": { "found": true, "minItemCount": 4, "aisles": ["PT03", "PT04"], "maxWer": 0.35, "minEntityRecall": 1.0 }
+  }
+]
