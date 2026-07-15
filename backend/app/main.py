@@ -61,6 +61,23 @@ def _static_dir() -> Path:
     return FRONTEND_DIR
 
 
+def _static_dirs() -> list[Path]:
+    dirs = []
+    if (FRONTEND_DIST_DIR / "index.html").is_file():
+        dirs.append(FRONTEND_DIST_DIR)
+    dirs.append(FRONTEND_DIR)
+    return dirs
+
+
+def _static_file(asset_path: str) -> Path | None:
+    for static_dir in _static_dirs():
+        root = static_dir.resolve()
+        path = (root / asset_path).resolve()
+        if path.is_file() and (path == root or root in path.parents):
+            return path
+    return None
+
+
 def _message_from_payload(payload: dict[str, Any]) -> dict[str, Any]:
     message = payload.get("message")
     return message if isinstance(message, dict) else payload
@@ -839,6 +856,19 @@ async def public_config(request: Request) -> dict[str, Any]:
     }
 
 
+@app.get("/api/static-status")
+async def static_status() -> dict[str, Any]:
+    return {
+        "root": str(ROOT_DIR),
+        "frontend": str(FRONTEND_DIR),
+        "dist": str(FRONTEND_DIST_DIR),
+        "distIndex": (FRONTEND_DIST_DIR / "index.html").is_file(),
+        "distAssets": sorted(path.name for path in (FRONTEND_DIST_DIR / "assets").glob("*")) if (FRONTEND_DIST_DIR / "assets").is_dir() else [],
+        "sourceIndex": (FRONTEND_DIR / "index.html").is_file(),
+        "activeStaticDir": str(_static_dir()),
+    }
+
+
 @app.post("/api/feedback")
 async def feedback_save(request: Request) -> dict[str, Any]:
     payload = await request.json()
@@ -1224,11 +1254,10 @@ async def index() -> FileResponse:
 
 @app.get("/{asset_path:path}", include_in_schema=False)
 async def static_asset(asset_path: str) -> FileResponse:
-    static_dir = _static_dir().resolve()
-    path = (static_dir / asset_path).resolve()
-    if path.is_file() and static_dir in path.parents:
+    path = _static_file(asset_path)
+    if path:
         return FileResponse(path)
-    return FileResponse(static_dir / "index.html")
+    return FileResponse(_static_dir() / "index.html")
 
 
 
